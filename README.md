@@ -1,10 +1,10 @@
 **1. Clone wallet sources**
 
 ```
-git clone https://github.com/cryptonotefoundation/cryptonotewallet.git
+git clone https://github.com/cryptonotefoundation/GustWallet.git
 ```
 
-**2. Modify `CryptoNoteWallet.cmake`**
+**2. Modify `GustWallet.cmake`**
  
 ```
 set(CN_PROJECT_NAME "furiouscoin")

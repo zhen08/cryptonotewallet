@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-include(CryptoNoteWallet.cmake)
+include(GustWallet.cmake)
 
 project(${CN_PROJECT_NAME})
 
@@ -36,7 +36,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 set(VERSION "")
 configure_file("cryptonote/src/version.h.in" "version.h")
-configure_file("src/CryptoNoteWalletConfig.h.in" "CryptoNoteWalletConfig.h")
+configure_file("src/GustWalletConfig.h.in" "GustWalletConfig.h")
 
 add_definitions(-DGIT_REVISION=\"${GIT_REVISION}\")
 
@@ -188,7 +188,7 @@ if (WIN32)
 
   set(PLATFORM_DIR Windows)
   set(BUILD_PLATFORM WIN32)
-  set(BUILD_RESOURCES src/cryptonotewallet.rc)
+  set(BUILD_RESOURCES src/GustWallet.rc)
   set(QTMAIN Qt5::WinMain)
 
 elseif (UNIX)
@@ -200,7 +200,7 @@ elseif (UNIX)
     set(PLATFORM_DIR OSX)
     set(MACOSX_BUNDLE_INFO_STRING "Cryptonote GUI wallet")
     set(MACOSX_BUNDLE_LONG_VERSION_STRING "${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
-    set(MACOSX_BUNDLE_BUNDLE_NAME CryptonoteWallet)
+    set(MACOSX_BUNDLE_BUNDLE_NAME GustWallet)
     set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
     set(MACOSX_BUNDLE_BUNDLE_VERSION "$${VERSION_VERSION}.${VERSION_MINOR}.${VERSION_PATCH}")
 
